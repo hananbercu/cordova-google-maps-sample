@@ -13,6 +13,7 @@
     // Show a custom alert
     //
     function showAlert() {
+        console.log("showAlert()");
         navigator.notification.alert(
             'You are the winner!',  // message
             alertDismissed,         // callback
