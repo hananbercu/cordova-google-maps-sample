@@ -2,6 +2,8 @@
     "use strict";
 
     function onDeviceReady() {
+        console.log("onDeviceReady");
+        alert("onDeviceReady");
         document.addEventListener("online", onOnline, false);
         document.addEventListener("resume", onResume, false);
         loadMapsApi();
