@@ -10,14 +10,17 @@
     }
 
     function onOnline() {
+        console.log("onOnline");
         loadMapsApi();
     }
 
     function onResume() {
+        console.log("onResume");
         loadMapsApi();
     }
 
     function loadMapsApi() {
+        console.log("loadMapApi");
         if (navigator.connection.type === Connection.NONE || (global.google !== undefined && global.google.maps)) {
             return;
         }
