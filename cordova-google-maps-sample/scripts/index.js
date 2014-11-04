@@ -3,10 +3,22 @@
 
     function onDeviceReady() {
         console.log("onDeviceReady");
-        alert("onDeviceReady");
+        showAlert();
         document.addEventListener("online", onOnline, false);
         document.addEventListener("resume", onResume, false);
         loadMapsApi();
+    }
+
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
     }
 
     function onOnline() {
